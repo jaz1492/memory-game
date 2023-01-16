@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    background-color: darkgrey;
+}
+h1{color: red;}
+.menu-container{
+    margin: 20% auto;
+    text-align: center;
+}
+.back{
+    background-image: url("images/card-back.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.card-1{
+    min-width: 50px;
+    min-height: 68px;
+}
+#opening-menu{
+    display: none;/*change this to absolute when finished editing*/
+    position: absolute;
+    top: 0;
+    background-color: beige;
+    width: 100vw;
+    height: 100vh;
+}
+#card-table{
+    background-color: forestgreen;
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh auto 0 auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: minmax(100px, auto);
+    grid-auto-rows: minmax(100px, auto);
+    /* display: flex;
+    flex: 1 1 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center; */
+    gap: 20px;
+    border: 1px solid black;
+    width: 90%;
+    height: 90%;
+}   
