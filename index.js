@@ -16,7 +16,9 @@ card.addEventListener("click",()=>{
     selectedCards.push(card.parentElement.className);
     if(selectedCards.length===2){
         hasTwo();
-        setTimeout(()=>cards.src='images/card-back.png',1000);
+        for(const selectedCard of selectedCards){
+            document.body.querySelector("."+selectedCard).children[0].src="images/card-back.png";
+        }
     }
 })};
 function hasTwo(){
