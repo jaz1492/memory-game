@@ -1,4 +1,5 @@
 body{
+    font-size: 16px;
     margin: 0;
     background-color: darkgrey;
 }
@@ -12,18 +13,34 @@ h1{color: red;}
     height: 100vh;
     width: 100vw;
     top: 0;
-    background-color:transparent);
+    background-color:transparent;
 }
-.hide{
-    display: none;
+.game-ui{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    flex-direction: column;
+    height: 90vh;
+    width: 10vw;
+    
 }
+.lives{
+    height: 50px;
+    width: 50px;
+}
+
 .card{
     max-width: 100%;
     max-height: 100%;
+    cursor: pointer;
 }
 .card-hide{
     position: relative;
     z-index: -5;
+}
+.hide{
+    display: none;
 }
 #opening-menu{
     display: block;/*change this to block when finished editing*/
@@ -32,6 +49,7 @@ h1{color: red;}
     background-color: beige;
     width: 100vw;
     height: 100vh;
+    z-index: 5;
 }
 #card-table{
     background-color: forestgreen;
@@ -45,15 +63,14 @@ h1{color: red;}
 .cards-container{
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fill,minmax(50px, auto));
-    grid-auto-rows: minmax(68px, auto);
+    grid-template-columns: repeat(13,minmax(50px, auto));
+    grid-auto-rows: minmax(70px, auto);
     /* display: flex;
     flex: 1 1 100%;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center; */
     gap: 20px;
-    border: 1px solid black;
     width: 90%;
     height: 90%;
 }   
