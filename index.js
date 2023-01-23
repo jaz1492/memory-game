@@ -1,14 +1,8 @@
-// const playBtn = document.body.querySelector(".play-button");
-// const openingMenu = document.getElementById("opening-menu");
-// function clearMenu(){
-//     openingMenu.style.display="none";
-// }
-// playBtn.onClick('event',()=>{openingMenu.display="none"});
-
 const suits=["Hearts", "Spades", "Diamonds", "Clubs"];
 const values =["A",2,3,4,5,6,7,8,9,10,"J","Q","K"];
 const deck=[];
 let selectedCards =[];
+
 function clicker(){
 const cards = document.body.querySelectorAll(".card");
 for(const card of cards){
@@ -17,12 +11,13 @@ card.addEventListener("click",()=>{
     card.src=`images/${card.parentElement.className}.png`}
     selectedCards.push(card.parentElement.id);
     if(selectedCards.length===2){
+        document.body.querySelector(".overlay").classList.remove("hide");
         hasTwo();
         setTimeout(()=>{
         for(const card of cards){
-            console.log(card);
             card.src="images/card-back.png";
         }
+        document.body.querySelector(".overlay").classList.add("hide");
         selectedCards=[];},1000)
     }
 })};
@@ -67,4 +62,9 @@ function objFactory(name,idNum){
         class:name,
         id:idNum
     }
+}
+function clearMenu(){
+    cardMaker();
+    document.body.querySelector(".overlay").classList.add("hide");
+    document.querySelector("#opening-menu").style.display="none";
 }

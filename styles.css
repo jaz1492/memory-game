@@ -7,6 +7,16 @@ h1{color: red;}
     margin: 20% auto;
     text-align: center;
 }
+.overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background-color:transparent);
+}
+.hide{
+    display: none;
+}
 .card{
     max-width: 100%;
     max-height: 100%;
@@ -16,7 +26,7 @@ h1{color: red;}
     z-index: -5;
 }
 #opening-menu{
-    display: none;/*change this to block when finished editing*/
+    display: block;/*change this to block when finished editing*/
     position: absolute;
     top: 0;
     background-color: beige;
